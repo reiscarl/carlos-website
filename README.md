@@ -45,6 +45,13 @@ HubSpot has its own cookie-banner feature in the portal settings. Leave it switc
 
 The preview image was rendered from an HTML source file with headless Chrome at 1200x630. If the headline or photo changes, the card should be regenerated to match.
 
+## Cache busting
+
+`styles.css` and `main.js` are linked with a `?v=` number. GitHub Pages tells
+browsers to cache those files, so after changing either one, bump the number in
+all three HTML files. Without that, visitors can keep running the old CSS or JS
+for some time after a deploy.
+
 ## Deploying
 
 Committing and pushing to `main` publishes to carlosreis.com.au through GitHub Pages. Allow a couple of minutes, then hard refresh.
