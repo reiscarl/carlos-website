@@ -127,6 +127,7 @@ ul {
   top: 0;
   left: 0;
   height: 2px;
+  pointer-events: none;
   width: 100%;
   z-index: 20;
   transform-origin: 0 50%;
@@ -428,6 +429,9 @@ main {
   position: absolute;
   inset: -22% -18%;
   z-index: 0;
+  /* Decorative only. Without this it extends above the photo and, once the
+     layout stacks on mobile, swallows taps on the hero buttons. */
+  pointer-events: none;
   background: radial-gradient(circle at 50% 45%, rgba(201, 161, 90, 0.42), rgba(201, 161, 90, 0.08) 45%, transparent 70%);
   filter: blur(26px);
 }
