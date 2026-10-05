@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Content Security Policy. Allows this site plus HubSpot, blocks everything else.
+       Note: frame-ancestors and HSTS can only be set as real HTTP headers, not here. -->
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    base-uri 'self';
+    object-src 'none';
+    img-src 'self' data: https:;
+    font-src 'self';
+    style-src 'self' 'unsafe-inline';
+    script-src 'self' 'unsafe-inline' https://*.hs-scripts.com https://*.hs-analytics.net https://*.hsadspixel.net https://*.hscollectedforms.net https://*.usemessages.com https://*.hsforms.net https://*.hsappstatic.net https://*.hs-banner.com https://*.hubspot.com;
+    connect-src 'self' https://*.hubspot.com https://*.hubapi.com https://*.hsforms.com https://*.hs-analytics.net https://*.hscollectedforms.net https://*.usemessages.com https://*.hs-banner.com wss://*.hubspot.com;
+    frame-src https://*.hubspot.com https://*.hsforms.com https://*.hsforms.net;
+    form-action 'self' https://*.hsforms.com https://*.hubspot.com;
+    worker-src 'self' blob:;
+  ">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+
+  <title>Page not found | Carlos Reis</title>
+  <meta name="robots" content="noindex, follow">
+  <meta name="theme-color" content="#101214">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+  <!-- Cookie consent. Placed first so keyboard users reach the choice before the page.
+       It is position:fixed, so this does not change where it appears on screen. -->
+  <div class="consent" id="consent" role="dialog" aria-labelledby="consent-title" tabindex="-1" hidden>
+    <div class="consent-body">
+      <p id="consent-title" class="consent-title">Cookies on this site</p>
+      <p class="consent-text">Live chat and analytics run on HubSpot, which sets cookies. Nothing loads until you choose. See the <a href="/privacy.html">privacy notice</a>.</p>
+    </div>
+    <div class="consent-actions">
+      <button type="button" class="btn btn-small" id="consent-accept">Accept</button>
+      <button type="button" class="btn-ghost" id="consent-decline">Decline</button>
+    </div>
+  </div>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="nav-name" href="/">Carlos Reis</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="error-page">
+      <p class="error-code">404</p>
+      <h1>That page doesn&rsquo;t exist.</h1>
+      <p class="hero-sub">The link may be out of date, or I may have moved something. The home page has everything.</p>
+      <a class="btn" href="/">Back to the home page</a>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; <span id="year">2026</span> Carlos Reis &middot; Sydney, Australia</p>
+    <p class="footer-legal"><a href="/privacy.html">Privacy &amp; cookies</a>
+      <button type="button" class="linkish" id="cookie-settings">Cookie settings</button></p>
+  </footer>
+
+  <script src="/main.js" defer></script>
+</body>
+</html>

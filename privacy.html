@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Content Security Policy. Allows this site plus HubSpot, blocks everything else.
+       Note: frame-ancestors and HSTS can only be set as real HTTP headers, not here. -->
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    base-uri 'self';
+    object-src 'none';
+    img-src 'self' data: https:;
+    font-src 'self';
+    style-src 'self' 'unsafe-inline';
+    script-src 'self' 'unsafe-inline' https://*.hs-scripts.com https://*.hs-analytics.net https://*.hsadspixel.net https://*.hscollectedforms.net https://*.usemessages.com https://*.hsforms.net https://*.hsappstatic.net https://*.hs-banner.com https://*.hubspot.com;
+    connect-src 'self' https://*.hubspot.com https://*.hubapi.com https://*.hsforms.com https://*.hs-analytics.net https://*.hscollectedforms.net https://*.usemessages.com https://*.hs-banner.com wss://*.hubspot.com;
+    frame-src https://*.hubspot.com https://*.hsforms.com https://*.hsforms.net;
+    form-action 'self' https://*.hsforms.com https://*.hubspot.com;
+    worker-src 'self' blob:;
+  ">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+
+  <title>Privacy and cookies | Carlos Reis</title>
+  <meta name="description" content="How carlosreis.com.au handles personal information and cookies.">
+  <link rel="canonical" href="https://carlosreis.com.au/privacy.html">
+  <meta name="robots" content="noindex, follow">
+  <meta name="theme-color" content="#101214">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Cookie consent. Placed first so keyboard users reach the choice before the page.
+       It is position:fixed, so this does not change where it appears on screen. -->
+  <div class="consent" id="consent" role="dialog" aria-labelledby="consent-title" tabindex="-1" hidden>
+    <div class="consent-body">
+      <p id="consent-title" class="consent-title">Cookies on this site</p>
+      <p class="consent-text">Live chat and analytics run on HubSpot, which sets cookies. Nothing loads until you choose. See the <a href="privacy.html">privacy notice</a>.</p>
+    </div>
+    <div class="consent-actions">
+      <button type="button" class="btn btn-small" id="consent-accept">Accept</button>
+      <button type="button" class="btn-ghost" id="consent-decline">Decline</button>
+    </div>
+  </div>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="nav-name" href="index.html">Carlos Reis</a>
+      <a class="btn btn-small" href="index.html">Back to site</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <article class="prose">
+      <h1>Privacy and cookies</h1>
+      <p class="updated">Last updated 5 October 2026</p>
+
+      <p>This site is run by Carlos Reis, a sole individual based in Sydney, Australia. This notice explains what personal information the site collects, why, and what you can do about it. Plain English, no surprises.</p>
+
+      <h2>Who is responsible</h2>
+      <p>Carlos Reis, Sydney, New South Wales, Australia. You can reach me at <a href="mailto:hello@carlosreis.com.au">hello@carlosreis.com.au</a> about anything on this page.</p>
+
+      <h2>What this site collects</h2>
+      <p>The site itself is a set of static pages. It has no database, no accounts and no forms of its own. Information is only collected when you choose to make contact or when you accept cookies.</p>
+      <ul>
+        <li><strong>Live chat.</strong> If you accept cookies and start a chat, HubSpot records the messages you send, along with technical details such as your browser type, approximate location derived from your IP address, and the pages you viewed.</li>
+        <li><strong>Booking a call.</strong> The booking link opens a HubSpot scheduling page where you enter your name, email address and anything else you choose to share.</li>
+        <li><strong>Email and WhatsApp.</strong> If you contact me directly, I receive whatever you send.</li>
+        <li><strong>Analytics.</strong> If you accept cookies, HubSpot records which pages you visited and how you arrived.</li>
+      </ul>
+
+      <h2>Cookies and your choice</h2>
+      <p>No tracking or chat cookies are set until you press Accept on the cookie banner. If you decline, the HubSpot script is never loaded and the live chat will not appear. You can still book a call, email me or message me on WhatsApp.</p>
+      <p>Your choice is stored in your browser's local storage so you are not asked on every visit. To change it, use the <strong>Cookie settings</strong> link in the footer of the home page, or clear this site's data in your browser.</p>
+      <p>If you accept and later change your mind, declining through that link deletes the HubSpot cookies already set on this site and stops the script from running again. Cookies set by HubSpot on its own domains, such as the booking page, are not covered by that and would need to be cleared in your browser.</p>
+      <p>The cookies set after you accept belong to HubSpot and are used to recognise returning visitors, keep a chat session running, and measure site traffic. HubSpot documents these in its own cookie policy.</p>
+
+      <h2>Why I use this information</h2>
+      <ul>
+        <li>To reply to you.</li>
+        <li>To arrange and hold meetings you book.</li>
+        <li>To understand, in aggregate, which parts of the site are useful.</li>
+      </ul>
+      <p>I do not sell personal information, and I do not use it for automated decision-making or profiling.</p>
+
+      <h2>Who else sees it</h2>
+      <p>HubSpot, Inc. provides the chat, scheduling and analytics, and processes this information on my behalf. HubSpot stores data on servers outside Australia, including in the United States and the European Union. Submitting a chat message or booking a call means your information will be handled overseas on that basis.</p>
+      <p>This site is hosted on GitHub Pages, which logs requests, including IP addresses, for security and operational reasons.</p>
+      <p>Beyond those providers, I do not share your information with anyone unless you ask me to, or I am required to by law.</p>
+
+      <h2>How long it is kept</h2>
+      <p>Chat transcripts and booking records are kept in HubSpot while they are useful for our conversation, and reviewed periodically. If you ask me to delete your information, I will, unless I am required to keep it.</p>
+
+      <h2>Security</h2>
+      <p>The site is served over HTTPS. It collects nothing directly, stores no credentials and runs no server-side code, which keeps the attack surface small. Information you send through chat or the booking page is protected by HubSpot's security controls. No system is perfect, so please do not send sensitive personal information, financial details or identity documents through chat.</p>
+
+      <h2>Your rights</h2>
+      <p>Under the Australian Privacy Act 1988 and the Australian Privacy Principles you can ask me for a copy of the personal information I hold about you, ask me to correct it, or ask me to delete it. Email <a href="mailto:hello@carlosreis.com.au">hello@carlosreis.com.au</a> and I will respond within a reasonable period, normally 30 days.</p>
+      <p>If you are in the United Kingdom or the European Economic Area, you also have rights under the UK GDPR and EU GDPR, including the right to object to processing and to withdraw consent at any time. To withdraw consent, use the Cookie settings link described above.</p>
+      <p>If you are unhappy with how I have handled your information, you can complain to the Office of the Australian Information Commissioner at <a href="https://www.oaic.gov.au" target="_blank" rel="noopener">oaic.gov.au</a>, or to your local supervisory authority if you are outside Australia.</p>
+
+      <h2>External links</h2>
+      <p>This site links to LinkedIn, WhatsApp and HubSpot. Once you follow one of those links, their privacy policies apply, not this one.</p>
+
+      <h2>Changes</h2>
+      <p>If this notice changes, the date at the top changes with it.</p>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; <span id="year">2026</span> Carlos Reis &middot; Sydney, Australia</p>
+    <p class="footer-legal"><a href="index.html">Home</a>
+      <button type="button" class="linkish" id="cookie-settings">Cookie settings</button>
+    </p>
+  </footer>
+
+  <script src="main.js" defer></script>
+</body>
+</html>

@@ -1,85 +1,190 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-AU">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Carlos Reis — Commercial Leader | Sales, Business Development &amp; CX</title>
-  <meta name="description" content="Carlos Reis is a Sydney-based senior commercial leader with 20 years of experience growing revenue through sales, business development and customer experience.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Content Security Policy. Allows this site plus HubSpot, blocks everything else.
+       Note: frame-ancestors and HSTS can only be set as real HTTP headers, not here. -->
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    base-uri 'self';
+    object-src 'none';
+    img-src 'self' data: https:;
+    font-src 'self';
+    style-src 'self' 'unsafe-inline';
+    script-src 'self' 'unsafe-inline' https://*.hs-scripts.com https://*.hs-analytics.net https://*.hsadspixel.net https://*.hscollectedforms.net https://*.usemessages.com https://*.hsforms.net https://*.hsappstatic.net https://*.hs-banner.com https://*.hubspot.com;
+    connect-src 'self' https://*.hubspot.com https://*.hubapi.com https://*.hsforms.com https://*.hs-analytics.net https://*.hscollectedforms.net https://*.usemessages.com https://*.hs-banner.com wss://*.hubspot.com;
+    frame-src https://*.hubspot.com https://*.hsforms.com https://*.hsforms.net;
+    form-action 'self' https://*.hsforms.com https://*.hubspot.com;
+    worker-src 'self' blob:;
+  ">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+
+  <title>Carlos Reis | Commercial Leader in Sales, Business Development &amp; CX</title>
+  <meta name="description" content="Carlos Reis is a Sydney-based senior commercial leader who grows revenue through sales, business development and customer experience.">
+  <link rel="canonical" href="https://carlosreis.com.au/">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#101214">
+
+  <!-- Social sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://carlosreis.com.au/">
+  <meta property="og:title" content="Carlos Reis | Commercial Leader in Sales, BD &amp; CX">
+  <meta property="og:description" content="Sydney-based senior commercial leader. I build teams and partnerships that grow revenue.">
+  <meta property="og:image" content="https://carlosreis.com.au/images/share-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Carlos Reis, commercial leader in sales, business development and customer experience.">
+  <meta property="og:locale" content="en_AU">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Carlos Reis | Commercial Leader in Sales, BD &amp; CX">
+  <meta name="twitter:description" content="Sydney-based senior commercial leader. I build teams and partnerships that grow revenue.">
+  <meta name="twitter:image" content="https://carlosreis.com.au/images/share-card.png">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+  <link rel="preload" href="fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Carlos Reis",
+    "url": "https://carlosreis.com.au/",
+    "image": "https://carlosreis.com.au/images/headshot.jpg",
+    "jobTitle": "Commercial Leader in Sales, Business Development and Customer Experience",
+    "description": "Sydney-based senior commercial leader who grows revenue through sales, business development and customer experience.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Sydney",
+      "addressRegion": "NSW",
+      "addressCountry": "AU"
+    },
+    "email": "hello@carlosreis.com.au",
+    "sameAs": ["https://www.linkedin.com/in/mrcarlosreis/"],
+    "knowsAbout": [
+      "New business development",
+      "Revenue growth",
+      "Strategic account management",
+      "Sales pipeline governance",
+      "Go-to-market strategy",
+      "Customer experience"
+    ]
+  }
+  </script>
 </head>
 <body>
+
+  <!-- Cookie consent. Placed first so keyboard users reach the choice before the page.
+       It is position:fixed, so this does not change where it appears on screen. -->
+  <div class="consent" id="consent" role="dialog" aria-labelledby="consent-title" tabindex="-1" hidden>
+    <div class="consent-body">
+      <p id="consent-title" class="consent-title">Cookies on this site</p>
+      <p class="consent-text">Live chat and analytics run on HubSpot, which sets cookies. Nothing loads until you choose. See the <a href="privacy.html">privacy notice</a>.</p>
+    </div>
+    <div class="consent-actions">
+      <button type="button" class="btn btn-small" id="consent-accept">Accept</button>
+      <button type="button" class="btn-ghost" id="consent-decline">Decline</button>
+    </div>
+  </div>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="scroll-progress" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
 
   <header class="nav">
     <div class="nav-inner">
       <a class="nav-name" href="#top">Carlos Reis</a>
-      <nav class="nav-links" aria-label="Sections">
-        <a href="#about">About</a>
+
+      <nav class="nav-links" id="nav-links" aria-label="Sections">
         <a href="#track-record">Track record</a>
+        <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
       </nav>
-      <a class="btn btn-small" href="https://meetings.hubspot.com/hello3189?uuid=edfc3815-68ff-4b9c-b841-300e1661205b" target="_blank" rel="noopener">Book a call</a>
+
+      <a class="btn btn-small nav-cta" href="https://meetings.hubspot.com/hello3189?uuid=edfc3815-68ff-4b9c-b841-300e1661205b" target="_blank" rel="noopener">Book a call</a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
     </div>
   </header>
 
-  <main id="top">
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <nav aria-label="Sections">
+      <a href="#track-record">Track record</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn" href="https://meetings.hubspot.com/hello3189?uuid=edfc3815-68ff-4b9c-b841-300e1661205b" target="_blank" rel="noopener">Book a call</a>
+  </div>
 
-    <section class="hero">
+  <main id="main">
+
+    <section class="hero" id="top">
       <div class="hero-text">
         <p class="eyebrow">Sydney, Australia</p>
         <h1>Carlos Reis</h1>
         <p class="hero-headline">I build commercial teams and partnerships that grow revenue.</p>
-        <p class="hero-sub">Senior leader across sales, business development and customer experience — twenty years of turning complex, multi-stakeholder markets into growth.</p>
+        <p class="hero-sub">Senior leader across sales, business development and customer experience, with a record of turning complex, multi-stakeholder markets into growth.</p>
         <div class="hero-actions">
           <a class="btn" href="https://meetings.hubspot.com/hello3189?uuid=edfc3815-68ff-4b9c-b841-300e1661205b" target="_blank" rel="noopener">Book a call</a>
-          <a class="link-quiet" href="https://www.linkedin.com/in/mrcarlosreis/" target="_blank" rel="noopener">LinkedIn ↗</a>
+          <a class="link-quiet" href="https://www.linkedin.com/in/mrcarlosreis/" target="_blank" rel="noopener">LinkedIn <span aria-hidden="true">↗</span></a>
         </div>
       </div>
       <figure class="hero-photo">
-        <span class="hero-photo-fallback" aria-hidden="true">CR</span>
-        <img src="images/headshot.jpg" alt="Portrait of Carlos Reis" onerror="this.remove()">
+        <span class="hero-bloom" aria-hidden="true"></span>
+        <span class="hero-photo-frame">
+          <img src="images/headshot.jpg" alt="Portrait of Carlos Reis" width="800" height="1000" fetchpriority="high">
+        </span>
       </figure>
     </section>
 
-    <section id="track-record" class="stats reveal" aria-label="Track record">
-      <h2 class="visually-hidden">Track record</h2>
+    <section id="track-record" class="section stats reveal" aria-labelledby="track-record-heading">
+      <h2 id="track-record-heading">Track record</h2>
       <div class="stats-grid">
         <div class="stat">
           <p class="stat-number">195%</p>
-          <p class="stat-caption">Revenue growth delivered within 19 months</p>
+          <p class="stat-caption">Growth in active clients, 177 to 523, in 19 months</p>
+        </div>
+        <div class="stat">
+          <p class="stat-number">$10.5M</p>
+          <p class="stat-caption">Annualised new revenue, up from $3.5M over 19 months</p>
         </div>
         <div class="stat">
           <p class="stat-number">32%</p>
-          <p class="stat-caption">Year-on-year growth in domestic new business</p>
+          <p class="stat-caption">YoY growth in domestic new business, $10M portfolio</p>
         </div>
         <div class="stat">
-          <p class="stat-number">300+</p>
-          <p class="stat-caption">Active partner accounts managed across three regions</p>
-        </div>
-        <div class="stat">
-          <p class="stat-number">20&nbsp;yrs</p>
-          <p class="stat-caption">Leading commercial teams in B2B and B2C</p>
+          <p class="stat-number">$40M</p>
+          <p class="stat-caption">Peak partner network revenue, 300+ partners in three regions</p>
         </div>
       </div>
     </section>
 
-    <section id="about" class="section reveal">
-      <h2>About</h2>
+    <section id="about" class="section reveal" aria-labelledby="about-heading">
+      <h2 id="about-heading">About</h2>
       <div class="about-body">
-        <p>I&rsquo;m a senior commercial leader with a track record of revenue growth, new business development and strategic account management. I&rsquo;ve built and led high-performance teams in both B2B and B2C settings, managed multi-million-dollar portfolios, and designed go-to-market strategies across APAC, Greater China and Europe.</p>
-        <p>Much of that record was built in international education — one of the most complex, multi-stakeholder markets there is, where every deal spans institutions, agents, regulators and end customers. The playbook transfers: disciplined pipeline governance, genuine partner relationships, and teams that are coached to close.</p>
+        <p>I&rsquo;m a senior commercial leader with a track record of revenue growth, new business development and strategic account management. I&rsquo;ve built and led teams in both B2B and B2C settings, and designed go-to-market strategies across APAC, Greater China and Europe.</p>
+        <p>Much of that record was built in complex, multi-stakeholder markets, where a single deal spans institutions, partners, regulators and end customers. The playbook transfers: disciplined pipeline governance, genuine partner relationships, and teams that are coached to close.</p>
         <p>I&rsquo;m now focused on Head of Sales, Customer Experience and Business Development roles where that commercial rigour can drive the next stage of a company&rsquo;s growth.</p>
       </div>
     </section>
 
-    <section id="skills" class="section reveal">
-      <h2>Skills</h2>
+    <section id="skills" class="section reveal" aria-labelledby="skills-heading">
+      <h2 id="skills-heading">Skills</h2>
       <div class="skills-grid">
         <div class="skill-group">
-          <h3>Revenue &amp; Growth</h3>
+          <h3>Revenue and growth</h3>
           <ul>
             <li>New business development &amp; revenue growth</li>
             <li>Multi-channel go-to-market strategy</li>
@@ -88,7 +193,7 @@
           </ul>
         </div>
         <div class="skill-group">
-          <h3>Leadership &amp; Strategy</h3>
+          <h3>Leadership and strategy</h3>
           <ul>
             <li>Team leadership &amp; sales coaching</li>
             <li>Executive stakeholder presentations</li>
@@ -96,18 +201,18 @@
           </ul>
         </div>
         <div class="skill-group">
-          <h3>Commercial Operations</h3>
+          <h3>Commercial operations</h3>
           <ul>
             <li>Sales pipeline governance &amp; forecasting</li>
-            <li>CRM governance — HubSpot, Salesforce</li>
+            <li>CRM governance in HubSpot and Salesforce</li>
             <li>Budget management &amp; ROI analysis</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <section id="education" class="section reveal">
-      <h2>Education</h2>
+    <section id="education" class="section reveal" aria-labelledby="education-heading">
+      <h2 id="education-heading">Education</h2>
       <ul class="education-list">
         <li>
           <span class="edu-degree">Graduate Certificate in Digital Transformation</span>
@@ -124,9 +229,9 @@
       </ul>
     </section>
 
-    <section id="contact" class="section contact reveal">
-      <h2>Contact</h2>
-      <p class="contact-lead">If you&rsquo;re building a commercial team — or rethinking how one performs — I&rsquo;d like to hear about it.</p>
+    <section id="contact" class="section contact reveal" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact</h2>
+      <p class="contact-lead">If you&rsquo;re building a commercial team, or rethinking how one performs, I&rsquo;d like to hear about it.</p>
       <a class="btn" href="https://meetings.hubspot.com/hello3189?uuid=edfc3815-68ff-4b9c-b841-300e1661205b" target="_blank" rel="noopener">Book a call</a>
       <ul class="contact-links">
         <li><a href="mailto:hello@carlosreis.com.au">hello@carlosreis.com.au</a></li>
@@ -138,12 +243,13 @@
   </main>
 
   <footer class="footer">
-    <p>&copy; 2026 Carlos Reis &middot; Sydney, Australia</p>
+    <p>&copy; <span id="year">2026</span> Carlos Reis &middot; Sydney, Australia</p>
+    <p class="footer-legal">
+      <a href="privacy.html">Privacy and cookies</a>
+      <button type="button" class="linkish" id="cookie-settings">Cookie settings</button>
+    </p>
   </footer>
 
-  <!-- Start of HubSpot Embed Code -->
-  <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/21685469.js"></script>
-  <!-- End of HubSpot Embed Code -->
-
+  <script src="main.js" defer></script>
 </body>
 </html>
