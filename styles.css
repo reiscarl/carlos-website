@@ -19,6 +19,9 @@
 /* ---------- Tokens ---------- */
 
 :root {
+  /* Dark-only design: tells the browser to draw its own UI (scrollbars,
+     the canvas before styles load) dark as well. */
+  color-scheme: dark;
   --bg: #101214;
   --surface: #17191c;
   --text: #eceae6;
@@ -61,6 +64,13 @@ h1, h2, h3 {
   font-weight: 500;
   line-height: 1.1;
   text-wrap: balance;
+}
+
+/* Avoid a single word stranded on the last line of a paragraph.
+   Classes that set text-wrap: balance (headline, contact lead) still win. */
+p,
+li {
+  text-wrap: pretty;
 }
 
 a {
@@ -739,8 +749,9 @@ body:has(.consent:not([hidden])) {
 
 /* ---------- Scroll reveal ---------- */
 
-/* Scroll-driven, so sections stay visible if the feature or JS is unavailable. */
-@supports (animation-timeline: view()) {
+/* Scroll-driven, so sections stay visible if the feature or JS is unavailable.
+   The animation-range check filters out browsers with only partial support. */
+@supports (animation-timeline: view()) and (animation-range: entry) {
   @media (prefers-reduced-motion: no-preference) {
     .reveal {
       animation: reveal-in both;
@@ -835,16 +846,29 @@ body:has(.consent:not([hidden])) {
 
 }
 
+/* Reduced motion: remove movement, keep colour changes. The scroll-driven
+   effects above are already opt-in under prefers-reduced-motion: no-preference. */
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
   }
 
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
+  .btn:hover,
+  .hero-photo:hover img {
+    transform: none;
+  }
+
+  .skip-link,
+  .nav-links a::after,
+  .nav-toggle-bar,
+  .hero-photo img {
+    transition: none;
+  }
+
+  /* The underline wipe becomes an instant underline; the colour still fades. */
+  .link-quiet,
+  .contact-links a,
+  .footer-legal a {
+    transition: color 0.25s var(--ease);
   }
 }
