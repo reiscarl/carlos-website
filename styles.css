@@ -390,15 +390,6 @@ main {
   padding: 7rem 0 6rem;
 }
 
-.eyebrow {
-  color: var(--accent);
-  font-size: 0.8125rem;
-  font-weight: 600;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  margin-bottom: 1.25rem;
-}
-
 .hero h1 {
   font-size: clamp(2.75rem, 6.2vw, 4.25rem);
   letter-spacing: -0.025em;
